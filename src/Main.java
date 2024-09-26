@@ -24,5 +24,18 @@ public class Main {
         System.out.println("🌍"); // Емоджі земної кулі
         System.out.println("🎉"); // Емоджі святкування
         System.out.println("\n---------------------------------\n");
+        // Завдання 3: Перевірка типу речення
+        Scanner scanner = new Scanner(System.in);
+        System.out.println("Введіть речення:");
+        String sentence = scanner.nextLine();
+        if (sentence.endsWith("?")) {
+            System.out.println("Речення є питальним.");
+        } else if (sentence.endsWith("!")) {
+            System.out.println("Речення є окличним.");
+        } else {
+            System.out.println("Речення є звичайним.");
+        }
+        // Закриваємо сканер
+        scanner.close();
     }
 }
