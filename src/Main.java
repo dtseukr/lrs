@@ -39,7 +39,31 @@ public class Main {
         System.out.println("2. Якщо x == 2, виводиться 'Case 2'.");
         System.out.println("3. Якщо x == 0, виконується гілка 'default', і виводиться 'default case'.");
 
+// -------------------- Завдання 2: Обчислення виразу Y --------------------
+        System.out.println("\nЗавдання 2: Обчислення Y залежно від значення X");
 
+// Запитуємо користувача ввести значення X
+        System.out.print("Введіть ціле число X: ");
+        int X = scanner.nextInt();
+        double Y;  // Результат виразу Y
+
+// Визначаємо вираз залежно від значення X
+        if (X < 0) {
+// Якщо X < 0, обчислюємо Y = 3X^3 - 12X + 4
+            Y = 3 * Math.pow(X, 3) - 12 * X + 4;
+            System.out.println("X < 0. Вираховуємо Y за формулою Y = 3X^3 - 12X + 4.");
+        } else if (X == 0) {
+// Якщо X == 0, то Y = 0
+            Y = 0;
+            System.out.println("X == 0. Y дорівнює 0.");
+        } else {
+// Якщо X > 0, обчислюємо Y = ((X^4 - 11)(X^4 + 11)) / sqrt(X)
+            Y = ((Math.pow(X, 4) - 11) * (Math.pow(X, 4) + 11)) / Math.sqrt(X);
+            System.out.println("X > 0. Вираховуємо Y за формулою ((X^4 - 11)(X^4 + 11)) / sqrt(X).");
+        }
+
+        // Виводимо результат обчислення Y
+        System.out.println("Значення Y: " + Y);
 
     }
 }
