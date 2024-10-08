@@ -64,6 +64,28 @@ public class Main {
 
         // Виводимо результат обчислення Y
         System.out.println("Значення Y: " + Y);
+        // -------------------- Завдання 3: Вітання користувача за часом --------------------
+        System.out.println("\nЗавдання 3: Вітання користувача залежно від часу");
 
+        // Запитуємо у користувача поточний час у форматі "година: хвилина"
+        System.out.print("Введіть час у форматі 'година: хвилина' (наприклад, 14:30): ");
+        scanner.nextLine();  // Щоб спожити символ нової лінії після nextInt()
+        String time = scanner.nextLine();
+
+        // Розділяємо введений час на години і хвилини
+        String[] parts = time.split(":");
+        int hour = Integer.parseInt(parts[0]);
+        int minute = Integer.parseInt(parts[1]);
+
+        // Визначаємо привітання за годиною
+        if (hour >= 0 && hour < 12) {
+            System.out.println("Добрий ранок");
+        } else if (hour >= 12 && hour < 17) {
+            System.out.println("Добрий день");
+        } else if (hour >= 17 && hour < 22) {
+            System.out.println("Добрий вечір");
+        } else {
+            System.out.println("Добраніч");
+        }
     }
 }
